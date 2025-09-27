@@ -1,12 +1,12 @@
-import Note from './components/Note'
+import Person from './components/Person'
 
-const App = ({ notes }) => {
+const App = ({ persons }) => {
   return (
     <div>
-      <h1>Notes</h1>
+      <h1>Phonebook</h1>
       <ul>
-        {notes.map((note) => (
-          <Note key={note.id} note={note} />
+        {persons.map((person) => (
+          <Person key={person.id} person={person} />
         ))}
       </ul>
     </div>

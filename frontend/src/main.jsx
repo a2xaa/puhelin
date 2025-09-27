@@ -1,24 +1,24 @@
 import ReactDOM from 'react-dom/client'
 import App from './App'
 
-const notes = [
+const persons = [
   {
     id: 1,
-    content: 'HTML is easy',
-    important: true,
+    name: 'Arto Hellas',
+    number: '040-123456',
   },
   {
     id: 2,
-    content: 'Browser can execute only JavaScript',
-    important: false,
+    name: 'Ada Lovelace', 
+    number: '39-44-5323523',
   },
   {
     id: 3,
-    content: 'GET and POST are the most important methods of HTTP protocol',
-    important: true,
+    name: 'Dan Abramov',
+    number: '12-43-234345',
   },
 ]
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <App notes={notes} />
+  <App persons={persons} />
 )
