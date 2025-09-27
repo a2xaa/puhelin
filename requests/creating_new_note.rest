@@ -1,8 +1,0 @@
-POST http://localhost:3001/api/persons/
-Content-Type: application/json
-
-{
-  "name": "Teo Maensivu",
-  "number": "12-34-5678901",
-  "important": true
-}
