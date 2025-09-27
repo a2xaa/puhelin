@@ -118,6 +118,29 @@ app.post('/api/persons', (request, response) => {
   response.json(person)
 })
 
+// update person
+app.put('/api/persons/:id', (request, response) => {
+  const id = request.params.id
+  const body = request.body
+
+  if (!body.name) {
+    return response.status(400).json({ error: 'name missing' })
+  }
+
+  if (!body.number) {
+    return response.status(400).json({ error: 'number missing' })
+  }
+
+  const person = {
+    name: body.name,
+    number: body.number,
+    id: id,
+  }
+
+  persons = persons.map(p => p.id !== id ? p : person)
+  response.json(person)
+})
+
 // info route
 app.get('/info', (request, response) => {
   const count = persons.length
